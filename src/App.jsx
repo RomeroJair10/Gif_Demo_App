@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Categories from "./components/Categories"
+import GifsExpo from "./components/GifsExpo"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
        setCategories={setCategories}
        />
       <hr />
+     //<GifsExpo categories={categories} />//
     </div>
   )
 }
