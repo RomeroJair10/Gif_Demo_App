@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CategoriesList from "./CategoriesList"
+import GifsExpo from "../GifsExpo";
 
 const Categories = ({categories = [], setCategories}) => {
     const [inputValue, setInputValue] =useState("")
@@ -32,7 +33,11 @@ const Categories = ({categories = [], setCategories}) => {
         Add
       </button>
       <br />
-      <CategoriesList categories={categories} />
+      <CategoriesList 
+       categories={categories} 
+       setCategories={setCategories}/>
+       <hr />
+       <GifsExpo categories={categories} />
       </>
     )
 }

@@ -10,6 +10,7 @@ function App() {
 
     <div className="ms-5 mt-5 me-5">
       <h3>Gif Demo App</h3>
+    
       <hr />
        <Categories 
        categories={categories} 

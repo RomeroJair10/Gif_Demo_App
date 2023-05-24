@@ -20,13 +20,14 @@ const GifsExpo = ({categories}) => {
 
                let urlList = [] 
                console.log(gifs)
+
                gifs.forEach((gif) => {
                 const data = gif.data.map((item) =>{
-                    return item.images.fixed_width.url
+                    return item.images.fixed_height.url.split('?')[0]
                 })
                 urlList = [...urlList, ...data]
                })
-               console.log(urlList)
+               
                setGifsLists([...urlList])
             }
 
@@ -40,13 +41,13 @@ const GifsExpo = ({categories}) => {
     return (
         <>
         <h4>GIFSEXPO</h4>
-        <ol>
+        <div>
         {
             gifsLists.map((url) => (
-                <li key={url}>{url}</li>
+                <img key={url} src={url}/>
             ))
         }
-        </ol>
+        </div>
         </>
         
     )

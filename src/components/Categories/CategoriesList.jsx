@@ -1,15 +1,20 @@
-const CategoriesList = ({categories = []}) => {
-    return (
-        <ol>
+const CategoriesList = ({categories = [], setCategories}) => {
+  const deleteCategory = (categories) => {
+    const newList = categories.filter((cat)=>cat !== category)
+    setCategories(newList)
+  }
+  return(
+    <ol>
       {
-        categories.map((category)=>(
-          <li key={category}>
+        categories.map((category) => (
+          <li onClick={()=>deleteCategory(category)} key={category}>
             {category}
           </li>
         ))
       }
-      </ol>
-    )
+    </ol>
+  )
 }
+
 
 export default CategoriesList
